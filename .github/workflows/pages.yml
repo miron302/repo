@@ -1,0 +1,86 @@
+name: Build and deploy APT repository
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "debs/**"
+      - "Packages"
+      - "Packages.gz"
+      - "Release"
+      - "packages.json"
+      - "index.html"
+      - "update.sh"
+      - "scripts/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+# The workflow never commits generated files back to the branch. It validates
+# the indexes and deploys the freshly built site as a Pages artifact, so it
+# cannot trigger itself in a loop.
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build and validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: List Debian packages
+        run: |
+          {
+            echo "### Debian packages in \`debs/\`"
+            if compgen -G "debs/*.deb" > /dev/null; then
+              for file in debs/*.deb; do
+                echo "- \`$file\`"
+              done
+            else
+              echo "_No .deb files yet._"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Regenerate APT indexes
+        run: |
+          chmod +x update.sh
+          ./update.sh
+
+      - name: Validate repository metadata
+        run: python3 scripts/verify.py
+
+      - name: Stage static site
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp -a debs Packages Packages.gz Release packages.json index.html .nojekyll _site/
+          find _site -type f -printf '%P\n' | sort
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
