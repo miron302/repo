@@ -2,10 +2,34 @@
   "repository": {
     "name": "Miron302's Repository",
     "url": "https://miron302.github.io/repo/",
-    "generatedAt": "2026-11-14T19:46:50Z",
-    "packageCount": 0,
-    "packageFileCount": 0,
-    "architectures": []
+    "generatedAt": "2026-11-14T19:50:20Z",
+    "packageCount": 1,
+    "packageFileCount": 1,
+    "architectures": [
+      "iphoneos-arm64"
+    ]
   },
-  "packages": []
+  "packages": [
+    {
+      "package": "com.miron302.standby16",
+      "name": "StandBy16",
+      "version": "1.0.0",
+      "architectures": [
+        "iphoneos-arm64"
+      ],
+      "section": "Tweaks",
+      "description": "iOS 17 StandBy for iOS 16. Charge it, lock it, turn it sideways.",
+      "summary": "iOS 17 StandBy for iOS 16. Charge it, lock it, turn it sideways.",
+      "author": "miron302",
+      "maintainer": "miron302",
+      "depends": "mobilesubstrate, preferenceloader, firmware (>= 16.0)",
+      "homepage": null,
+      "depiction": null,
+      "icon": null,
+      "filename": "debs/com.miron302.standby16_1.0.0_iphoneos-arm64.deb",
+      "size": 56432,
+      "installedSize": 320,
+      "sha256": "a010b3c1254be09fb2c7c5f2f98b92f9968d8762c25899d5e4d9dda27ceabd2b"
+    }
+  ]
 }

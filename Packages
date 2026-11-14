@@ -1,0 +1,16 @@
+Package: com.miron302.standby16
+Name: StandBy16
+Description: iOS 17 StandBy for iOS 16. Charge it, lock it, turn it sideways.
+Maintainer: miron302
+Author: miron302
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader, firmware (>= 16.0)
+Architecture: iphoneos-arm64
+Version: 1.0.0
+Installed-Size: 320
+Filename: debs/com.miron302.standby16_1.0.0_iphoneos-arm64.deb
+Size: 56432
+MD5sum: 8db6d49754812b1ec5e68abd07931466
+SHA1: fba7d70dce9dd92ce30081e870d9ccbfbb2893b9
+SHA256: a010b3c1254be09fb2c7c5f2f98b92f9968d8762c25899d5e4d9dda27ceabd2b
+
