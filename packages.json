@@ -2,14 +2,35 @@
   "repository": {
     "name": "Miron302's Repository",
     "url": "https://miron302.github.io/repo/",
-    "generatedAt": "2026-11-14T19:50:20Z",
-    "packageCount": 1,
-    "packageFileCount": 1,
+    "generatedAt": "2026-11-14T20:12:42Z",
+    "packageCount": 2,
+    "packageFileCount": 2,
     "architectures": [
       "iphoneos-arm64"
     ]
   },
   "packages": [
+    {
+      "package": "com.miron302.dnfd",
+      "name": "DNFD",
+      "version": "0.1.0",
+      "architectures": [
+        "iphoneos-arm64"
+      ],
+      "section": "Tweaks",
+      "description": "Do Not F***ing Disturb - Focus-aware incoming call handling.",
+      "summary": "Do Not F***ing Disturb - Focus-aware incoming call handling.",
+      "author": "miron302",
+      "maintainer": "miron302",
+      "depends": "mobilesubstrate, preferenceloader, firmware (>= 16.0)",
+      "homepage": null,
+      "depiction": null,
+      "icon": null,
+      "filename": "debs/com.miron302.dnfd_0.1.0_iphoneos-arm64.deb",
+      "size": 20390,
+      "installedSize": 192,
+      "sha256": "21d5577e7df36b5f5e549cd3abb2a703d3add26c525294fed01a9d8cf0b37687"
+    },
     {
       "package": "com.miron302.standby16",
       "name": "StandBy16",

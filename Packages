@@ -1,3 +1,19 @@
+Package: com.miron302.dnfd
+Name: DNFD
+Depends: mobilesubstrate, preferenceloader, firmware (>= 16.0)
+Description: Do Not F***ing Disturb - Focus-aware incoming call handling.
+Maintainer: miron302
+Author: miron302
+Section: Tweaks
+Architecture: iphoneos-arm64
+Version: 0.1.0
+Installed-Size: 192
+Filename: debs/com.miron302.dnfd_0.1.0_iphoneos-arm64.deb
+Size: 20390
+MD5sum: 9871aa642a643df39f03d9ac57eb26b9
+SHA1: 07f74cfa1901b241e36444fcf706e73375616569
+SHA256: 21d5577e7df36b5f5e549cd3abb2a703d3add26c525294fed01a9d8cf0b37687
+
 Package: com.miron302.standby16
 Name: StandBy16
 Description: iOS 17 StandBy for iOS 16. Charge it, lock it, turn it sideways.
