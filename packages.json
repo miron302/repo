@@ -2,9 +2,9 @@
   "repository": {
     "name": "Miron302's Repository",
     "url": "https://miron302.github.io/repo/",
-    "generatedAt": "2026-11-14T20:12:42Z",
-    "packageCount": 2,
-    "packageFileCount": 2,
+    "generatedAt": "2026-11-14T20:26:51Z",
+    "packageCount": 3,
+    "packageFileCount": 3,
     "architectures": [
       "iphoneos-arm64"
     ]
@@ -51,6 +51,27 @@
       "size": 56432,
       "installedSize": 320,
       "sha256": "a010b3c1254be09fb2c7c5f2f98b92f9968d8762c25899d5e4d9dda27ceabd2b"
+    },
+    {
+      "package": "com.miron302.xenhtmlreborn",
+      "name": "Xen HTML Reborn (Native Engine)",
+      "version": "0.3-native1-1+debug",
+      "architectures": [
+        "iphoneos-arm64"
+      ],
+      "section": "Legacy Tweaks",
+      "description": "Lockscreen widgets rendered with a native JSON->UIKit engine instead of WebKit. iOS 16, rootless only. Homescreen module disabled.",
+      "summary": "Lockscreen widgets rendered with a native JSON->UIKit engine instead of WebKit. iOS 16, rootless only. Homescreen module disabled.",
+      "author": "miron302",
+      "maintainer": "miron302",
+      "depends": "firmware (>= 16.0), firmware (<< 17.0), mobilesubstrate, preferenceloader, ellekit",
+      "homepage": null,
+      "depiction": null,
+      "icon": null,
+      "filename": "debs/com.miron302.xenhtmlreborn_0.3-native1-1+debug_iphoneos-arm64.deb",
+      "size": 1390968,
+      "installedSize": 5932,
+      "sha256": "c72a108a76da02b8b2147f19b59ed66276a16381ae3439fa00914063a40a3d38"
     }
   ]
 }

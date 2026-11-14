@@ -33,6 +33,31 @@ No package metadata is invented: names, versions, descriptions, dependencies, an
 
 Build the new version with a higher `Version` in its control file, replace or add the `.deb` in `debs/`, then commit and push. Old versions are preserved unless you deliberately remove their `.deb` files. Removing a file is the only way a package disappears from the index.
 
+### Putting a package in a separate section (for example, Legacy Tweaks)
+
+Package managers such as Sileo and Zebra group packages using the `Section` value in the generated APT index, which normally comes from the `.deb` control file.
+
+To place a package in a separate group without modifying the `.deb` itself, add an override to `sections.conf`:
+
+```text
+com.miron302.xenhtmlreborn: Legacy Tweaks
+```
+
+Currently applied overrides are used when the generated `Packages` index is rebuilt; `packages.json` picks them up automatically, so the landing page also shows the overridden section.
+
+For the current tweak:
+
+```bash
+cp '/home/miron/Projects/XenHTMLReborn(v0.3-beta1).deb' 'debs/com.miron302.xenhtmlreborn_0.3-native1-1+debug_iphoneos-arm64.deb'
+./update.sh
+```
+
+The resulting index contains:
+
+```text
+Section: Legacy Tweaks
+```
+
 ### Naming
 
 Use the normal Debian package filename convention:
@@ -74,6 +99,7 @@ The script validates the generated metadata **before** replacing the published `
 ├── Release                   # generated repository metadata + checksums
 ├── packages.json             # generated data for the landing page
 ├── index.html                # landing page
+├── sections.conf             # optional Sileo/Zebra section overrides
 ├── update.sh                 # local/CI index builder
 ├── scripts/
 │   ├── aptlib.py             # control-file parser and version comparison

@@ -26,6 +26,7 @@ REPO_VERSION="${REPO_VERSION:-1.0}"
 
 ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 DEBS_DIR="${DEBS_DIR:-$ROOT/debs}"
+SECTIONS_FILE="${SECTIONS_FILE:-$ROOT/sections.conf}"
 
 if [[ -t 1 ]]; then
   ACCENT=$'\033[38;5;141m'
@@ -76,6 +77,52 @@ control_field() {
   ' <<<"$control"
 }
 
+section_override() {
+  # Look up an optional package-specific Section in sections.conf.
+  # Format: <Package>: <Section>
+  local package="$1"
+  [[ -f "$SECTIONS_FILE" ]] || return 0
+
+  awk -v package="$package" '
+    /^[[:space:]]*#/ { next }
+    /^[[:space:]]*$/ { next }
+    {
+      separator = index($0, ":")
+      if (separator == 0) {
+        printf "sections.conf: invalid line: %s\n", $0 > "/dev/stderr"
+        exit 2
+      }
+      key = substr($0, 1, separator - 1)
+      value = substr($0, separator + 1)
+      gsub(/^[[:space:]]+|[[:space:]]+$/, "", key)
+      gsub(/^[[:space:]]+|[[:space:]]+$/, "", value)
+      if (key == package) {
+        print value
+        exit
+      }
+    }
+  ' "$SECTIONS_FILE"
+}
+
+apply_section_override() {
+  # Replace (or add) only the Section field in the current control paragraph.
+  local section="$1"
+  control="$(awk -v section="$section" '
+    BEGIN { replaced = 0 }
+    /^Section:/ {
+      printf "Section: %s\n", section
+      replaced = 1
+      next
+    }
+    { print }
+    END {
+      if (!replaced) {
+        printf "Section: %s\n", section
+      }
+    }
+  ' <<<"$control")"
+}
+
 for deb in "${deb_files[@]}"; do
   filename="${deb##*/}"
 
@@ -105,6 +152,13 @@ for deb in "${deb_files[@]}"; do
 
   grep -q '^Description:' <<<"$control" \
     || die "$filename: missing Description field (refusing to invent one)"
+
+  override="$(section_override "$package")"
+  if [[ -n "$override" ]]; then
+    [[ "$override" != *$'\n'* ]] || die "$filename: invalid section override in sections.conf"
+    apply_section_override "$override"
+    printf '    ~ %s listed under section "%s" (sections.conf)\n' "$package" "$override"
+  fi
 
   for generated_field in Filename Size MD5sum SHA1 SHA256; do
     if grep -q "^${generated_field}:" <<<"$control"; then

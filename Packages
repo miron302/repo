@@ -30,3 +30,20 @@ MD5sum: 8db6d49754812b1ec5e68abd07931466
 SHA1: fba7d70dce9dd92ce30081e870d9ccbfbb2893b9
 SHA256: a010b3c1254be09fb2c7c5f2f98b92f9968d8762c25899d5e4d9dda27ceabd2b
 
+Package: com.miron302.xenhtmlreborn
+Name: Xen HTML Reborn (Native Engine)
+Description: Lockscreen widgets rendered with a native JSON->UIKit engine instead of WebKit. iOS 16, rootless only. Homescreen module disabled.
+Section: Legacy Tweaks
+Depends: firmware (>= 16.0), firmware (<< 17.0), mobilesubstrate, preferenceloader, ellekit
+Priority: optional
+Author: miron302
+Maintainer: miron302
+Architecture: iphoneos-arm64
+Version: 0.3-native1-1+debug
+Installed-Size: 5932
+Filename: debs/com.miron302.xenhtmlreborn_0.3-native1-1+debug_iphoneos-arm64.deb
+Size: 1390968
+MD5sum: 7f2845cde1a689fd91091f2c04ea2769
+SHA1: 6429d2cfa9bc9b5b64bfc9ca2fd7406a440210d4
+SHA256: c72a108a76da02b8b2147f19b59ed66276a16381ae3439fa00914063a40a3d38
+
