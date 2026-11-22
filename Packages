@@ -30,6 +30,22 @@ MD5sum: 8db6d49754812b1ec5e68abd07931466
 SHA1: fba7d70dce9dd92ce30081e870d9ccbfbb2893b9
 SHA256: a010b3c1254be09fb2c7c5f2f98b92f9968d8762c25899d5e4d9dda27ceabd2b
 
+Package: com.miron302.standby16
+Name: StandBy16
+Description: iOS 17 StandBy for iOS 16. Charge it, lock it, turn it sideways.
+Maintainer: miron302
+Author: miron302
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader, firmware (>= 16.0)
+Architecture: iphoneos-arm64
+Version: 1.0.1
+Installed-Size: 896
+Filename: debs/com.miron302.standby16_1.0.1_iphoneos-arm64.deb
+Size: 137172
+MD5sum: 6e9c6f234f8354244c8e944df08aa92a
+SHA1: dcf60e5d42a6e3dafa769cab34f148425eaae582
+SHA256: edf9531fe15ba0662ae2c25f85ff231ecbabd1d9f2d2a29abc3f5d36a809ce92
+
 Package: com.miron302.xenhtmlreborn
 Name: Xen HTML Reborn (Native Engine)
 Description: Lockscreen widgets rendered with a native JSON->UIKit engine instead of WebKit. iOS 16, rootless only. Homescreen module disabled.
