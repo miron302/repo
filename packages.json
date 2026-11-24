@@ -2,14 +2,35 @@
   "repository": {
     "name": "Miron302's Repository",
     "url": "https://miron302.github.io/repo/",
-    "generatedAt": "2026-11-22T13:04:55Z",
-    "packageCount": 3,
-    "packageFileCount": 4,
+    "generatedAt": "2026-11-24T21:33:10Z",
+    "packageCount": 4,
+    "packageFileCount": 6,
     "architectures": [
       "iphoneos-arm64"
     ]
   },
   "packages": [
+    {
+      "package": "com.miron302.blurify",
+      "name": "Blurify",
+      "version": "1.0.0",
+      "architectures": [
+        "iphoneos-arm64"
+      ],
+      "section": "Tweaks",
+      "description": "A tweak that lets you customise blur system-wide on iOS 16.",
+      "summary": "A tweak that lets you customise blur system-wide on iOS 16.",
+      "author": "Miron302",
+      "maintainer": "Miron302",
+      "depends": "mobilesubstrate, preferenceloader, firmware (>= 16.0)",
+      "homepage": null,
+      "depiction": null,
+      "icon": null,
+      "filename": "debs/com.miron302.blurify_1.0.0_iphoneos-arm64.deb",
+      "size": 13674,
+      "installedSize": 164,
+      "sha256": "873e8f618bae2c628ef9edcc054f32b1627585b2cfceada531e3efd4a5e2e820"
+    },
     {
       "package": "com.miron302.dnfd",
       "name": "DNFD",
@@ -34,7 +55,7 @@
     {
       "package": "com.miron302.standby16",
       "name": "StandBy16",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "architectures": [
         "iphoneos-arm64"
       ],
@@ -47,10 +68,10 @@
       "homepage": null,
       "depiction": null,
       "icon": null,
-      "filename": "debs/com.miron302.standby16_1.0.1_iphoneos-arm64.deb",
-      "size": 137172,
-      "installedSize": 896,
-      "sha256": "edf9531fe15ba0662ae2c25f85ff231ecbabd1d9f2d2a29abc3f5d36a809ce92"
+      "filename": "debs/com.miron302.standby16_1.0.2_iphoneos-arm64.deb",
+      "size": 134028,
+      "installedSize": 912,
+      "sha256": "45f0acba7a001fde524269513331cb389fc3ed9154090d97d3661b7927e14659"
     },
     {
       "package": "com.miron302.xenhtmlreborn",

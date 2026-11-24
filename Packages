@@ -1,3 +1,19 @@
+Package: com.miron302.blurify
+Name: Blurify
+Description: A tweak that lets you customise blur system-wide on iOS 16.
+Maintainer: Miron302
+Author: Miron302
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader, firmware (>= 16.0)
+Architecture: iphoneos-arm64
+Version: 1.0.0
+Installed-Size: 164
+Filename: debs/com.miron302.blurify_1.0.0_iphoneos-arm64.deb
+Size: 13674
+MD5sum: 86690a4e61250e9067c899f770e80fee
+SHA1: b4e43213cca04cc81725cac60a98e1c61309863d
+SHA256: 873e8f618bae2c628ef9edcc054f32b1627585b2cfceada531e3efd4a5e2e820
+
 Package: com.miron302.dnfd
 Name: DNFD
 Depends: mobilesubstrate, preferenceloader, firmware (>= 16.0)
@@ -45,6 +61,22 @@ Size: 137172
 MD5sum: 6e9c6f234f8354244c8e944df08aa92a
 SHA1: dcf60e5d42a6e3dafa769cab34f148425eaae582
 SHA256: edf9531fe15ba0662ae2c25f85ff231ecbabd1d9f2d2a29abc3f5d36a809ce92
+
+Package: com.miron302.standby16
+Name: StandBy16
+Description: iOS 17 StandBy for iOS 16. Charge it, lock it, turn it sideways.
+Maintainer: miron302
+Author: miron302
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader, firmware (>= 16.0)
+Architecture: iphoneos-arm64
+Version: 1.0.2
+Installed-Size: 912
+Filename: debs/com.miron302.standby16_1.0.2_iphoneos-arm64.deb
+Size: 134028
+MD5sum: 6b50ef059b98e0696d1a189a7a4297b2
+SHA1: fd2c7d08d13c3ff27d633af2fd12126d7922d517
+SHA256: 45f0acba7a001fde524269513331cb389fc3ed9154090d97d3661b7927e14659
 
 Package: com.miron302.xenhtmlreborn
 Name: Xen HTML Reborn (Native Engine)
