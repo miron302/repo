@@ -2,9 +2,9 @@
   "repository": {
     "name": "Miron302's Repository",
     "url": "https://miron302.github.io/repo/",
-    "generatedAt": "2026-11-24T21:33:10Z",
-    "packageCount": 4,
-    "packageFileCount": 6,
+    "generatedAt": "2026-11-24T22:23:02Z",
+    "packageCount": 5,
+    "packageFileCount": 7,
     "architectures": [
       "iphoneos-arm64"
     ]
@@ -51,6 +51,27 @@
       "size": 20390,
       "installedSize": 192,
       "sha256": "21d5577e7df36b5f5e549cd3abb2a703d3add26c525294fed01a9d8cf0b37687"
+    },
+    {
+      "package": "com.miron302.ipfinder",
+      "name": "IP Finder",
+      "version": "1.0.0",
+      "architectures": [
+        "iphoneos-arm64"
+      ],
+      "section": "Tweaks",
+      "description": "Network discovery and authorized SSH password audit tool\nIP Finder scans IP hosts, inspects a single host, prints researched common\npasswords, and can test them against SSH on authorized devices. Includes a\nPerl CLI (/var/jb/usr/bin/ip-finder) and a simple GUI app.",
+      "summary": "Network discovery and authorized SSH password audit tool",
+      "author": "miron302",
+      "maintainer": "miron302",
+      "depends": "firmware (>= 15.0), perl, openssh, coreutils",
+      "homepage": null,
+      "depiction": null,
+      "icon": null,
+      "filename": "debs/com.miron302.ipfinder_1.0.0_iphoneos-arm64.deb",
+      "size": 22220,
+      "installedSize": null,
+      "sha256": "36368e4df10b3eea5423189e7c870a8acbfdccb3c71b61be332bb75c925a4472"
     },
     {
       "package": "com.miron302.standby16",

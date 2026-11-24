@@ -30,6 +30,24 @@ MD5sum: 9871aa642a643df39f03d9ac57eb26b9
 SHA1: 07f74cfa1901b241e36444fcf706e73375616569
 SHA256: 21d5577e7df36b5f5e549cd3abb2a703d3add26c525294fed01a9d8cf0b37687
 
+Package: com.miron302.ipfinder
+Name: IP Finder
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: miron302
+Author: miron302
+Section: Tweaks
+Depends: firmware (>= 15.0), perl, openssh, coreutils
+Description: Network discovery and authorized SSH password audit tool
+ IP Finder scans IP hosts, inspects a single host, prints researched common
+ passwords, and can test them against SSH on authorized devices. Includes a
+ Perl CLI (/var/jb/usr/bin/ip-finder) and a simple GUI app.
+Filename: debs/com.miron302.ipfinder_1.0.0_iphoneos-arm64.deb
+Size: 22220
+MD5sum: 1743ecf50c5ab59aeaef8f8eaa58715b
+SHA1: 30e61298a0749d63711b74e31312595d6457e134
+SHA256: 36368e4df10b3eea5423189e7c870a8acbfdccb3c71b61be332bb75c925a4472
+
 Package: com.miron302.standby16
 Name: StandBy16
 Description: iOS 17 StandBy for iOS 16. Charge it, lock it, turn it sideways.
