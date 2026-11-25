@@ -6,13 +6,13 @@ Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64 all
 Components: main
 Description: iOS jailbreak tweaks by Miron302
-Date: Tue, 24 Nov 2026 22:23:02 +0000
+Date: Wed, 25 Nov 2026 11:13:13 +0000
 MD5Sum:
- 57b90856226295f48296333cd10ea960 4135 Packages
- 4904ff73edc4a8eef3eae6794a216247 1591 Packages.gz
+ 88824febb371728f67ba11c6d97d26be 4681 Packages
+ d437e6cd4e4940b10dc566b9076a4925 1704 Packages.gz
 SHA1:
- 0d326bcd6e3a78a16a78c538aab032d3d0c2a51d 4135 Packages
- 7ac85d8397977fa718af96bcd85590b33f94f07a 1591 Packages.gz
+ aa30eb270e0eaa17b7e85a7403b477cd6cce19ba 4681 Packages
+ bf3903b6e1872e27855993a48a5e600deb392f87 1704 Packages.gz
 SHA256:
- 5491f94be8ac74372735d49f1140e3d3d921f80be8a7969d64a716ba69fe6dbf 4135 Packages
- 653fe96b31476cc2badee9f72b18d9c5f40809a53641957bccaade1f6f8b0764 1591 Packages.gz
+ 7b7915e4c6f8c9d26855774a79a69afb6e2a34b3a284f88a18996a8c072ca5ec 4681 Packages
+ bb223719c92c310a6df75a20edc93a3f9d38701bc49d1a98b3a2e209f1aef002 1704 Packages.gz

@@ -2,9 +2,9 @@
   "repository": {
     "name": "Miron302's Repository",
     "url": "https://miron302.github.io/repo/",
-    "generatedAt": "2026-11-24T22:23:02Z",
+    "generatedAt": "2026-11-25T11:13:13Z",
     "packageCount": 5,
-    "packageFileCount": 7,
+    "packageFileCount": 8,
     "architectures": [
       "iphoneos-arm64"
     ]
@@ -76,7 +76,7 @@
     {
       "package": "com.miron302.standby16",
       "name": "StandBy16",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "architectures": [
         "iphoneos-arm64"
       ],
@@ -89,10 +89,10 @@
       "homepage": null,
       "depiction": null,
       "icon": null,
-      "filename": "debs/com.miron302.standby16_1.0.2_iphoneos-arm64.deb",
-      "size": 134028,
-      "installedSize": 912,
-      "sha256": "45f0acba7a001fde524269513331cb389fc3ed9154090d97d3661b7927e14659"
+      "filename": "debs/com.miron302.standby16_1.0.3_iphoneos-arm64.deb",
+      "size": 161824,
+      "installedSize": 1004,
+      "sha256": "1bf844ea6a2bf486244d01a8e42d13e857e076d5de3db387b4486628e85714bf"
     },
     {
       "package": "com.miron302.xenhtmlreborn",
